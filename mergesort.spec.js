@@ -32,4 +32,17 @@ describe('Merge Sort', function(){
     expect ( mergeSort([6, 5, 'Patrick', 4, 'Fila', 2, 1])).toEqual( [1, 2, 4, 5, 6, 'Fila', 'Patrick'] );
   });
 
+
+});
+
+describe('Split', function(){
+
+  beforeEach(() => {
+    let  swapCounter = 0;
+    let  comparisonCounter = 0;
+  });
+
+  it('splits an array of values in 2 and ',function(){
+    expect ( split([6, 5, 4, 3, 2, 1, 0])).toEqual( [ [ 6, 5, 4 ], [ 3, 2, 1, 0 ] ] );
+  });
 });
