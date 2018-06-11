@@ -46,3 +46,16 @@ describe('Split', function(){
     expect ( split([6, 5, 4, 3, 2, 1, 0])).toEqual( [ [ 6, 5, 4 ], [ 3, 2, 1, 0 ] ] );
   });
 });
+
+describe('Merge', function(){
+
+  beforeEach(() => {
+    let  swapCounter = 0;
+    let  comparisonCounter = 0;
+  });
+
+  it('merges 2 sorted arrays into one array',function(){
+    expect ( merge([1, 2, 4], [3, 5, 6])).toEqual( [ 1, 2, 3, 4, 5, 6] );
+  });
+});
+
