@@ -1,4 +1,13 @@
+
+
 describe('Bubble Sort', function(){
+
+  beforeEach(() => {
+    let  swapCounter = 0;
+    let  comparisonCounter = 0;
+  });
+
+
   it('handles an empty array', function(){
     expect( bubbleSort([]) ).toEqual( [] );
   });
@@ -24,4 +33,5 @@ describe('Bubble Sort', function(){
   it('handles an array mixing numbers and letters',function(){
     expect ( bubbleSort([6, 5, 'Patrick', 4, 'Fila', 2, 1])).toEqual( [1, 2, 4, 5, 6, 'Fila', 'Patrick'] );
   });
+
 });
