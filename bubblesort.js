@@ -3,6 +3,7 @@ function bubbleSort(arr) {
   while(interations){
 
   for (let i = 0; i < interations -1; i++){
+    debugger
     if(arr[i] > arr[i+1]){
       let greater = arr[i];
       let lower = arr[i+1];
