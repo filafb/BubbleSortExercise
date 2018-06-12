@@ -23,13 +23,13 @@ function merge(arr){
   return finalArr
 }
 
-function mergeSort (arr) {
-  if (arr.length < 2) return arr;
+// function mergeSort (arr) {
+//   if (arr.length < 2) return arr;
 
-  const splitArr = mergeSort(split(arr));
+//   const splitArr = mergeSort(split(arr));
 
-  return merge(splitArr);
-}
+//   return merge(splitArr);
+// }
 
 // Array -> split in 2
 //   2 arrays, each split in 2

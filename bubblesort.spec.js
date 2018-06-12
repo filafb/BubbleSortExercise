@@ -1,4 +1,5 @@
 describe('Bubble Sort', function(){
+
   it('handles an empty array', function(){
     expect( bubbleSort([]) ).toEqual( [] );
   });
@@ -22,7 +23,15 @@ describe('Bubble Sort', function(){
     expect ( bubbleSort([4, 5, 6, 1, 2, 4, 3])).toEqual( [1, 2, 3, 4, 4, 5, 6] );
   });
 
-  it('handles an array mixing numbers and letters',function(){
-    expect ( bubbleSort([6, 5, 'Patrick', 4, 'Fila', 2, 1])).toEqual( [1, 2, 4, 5, 6, 'Fila', 'Patrick'] );
+  it('compares the expected number of times', function(){
+    spyOn(window, 'compare').and.callThrough();
+    bubbleSort([4, 6, 5, 1]);
+    expect(compare.calls.count()).toEqual(10);
   });
+  it('swaps the expected number of times', function(){
+    spyOn(window, 'swap').and.callThrough();
+    bubbleSort([4, 6, 5, 1]);
+    expect(swap.calls.count()).toEqual(4);
+  });
+
 });

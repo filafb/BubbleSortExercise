@@ -3,15 +3,22 @@ function bubbleSort(arr) {
   while(interations){
 
   for (let i = 0; i < interations -1; i++){
-    debugger
-    if(arr[i] > arr[i+1]){
-      let greater = arr[i];
-      let lower = arr[i+1];
-      arr[i] = lower;
-      arr[i+1] = greater;
-      }
+    compare(arr,i)
     }
     interations--
   }
     return  arr
+  }
+
+  function compare(arr, i){
+    if(arr[i] > arr[i+1]){
+      swap(arr, i)
+      }
+  }
+
+  function swap (arr, i){
+    let greater = arr[i];
+    let lower = arr[i+1];
+    arr[i] = lower;
+    arr[i+1] = greater;
   }
